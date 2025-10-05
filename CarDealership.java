@@ -67,13 +67,13 @@ case "Minivan":
 System.out.println("Testing for SUV");
 break;
 case "Hatchback":
-System.out.println("Testing for SUV");
+System.out.println("Testing for zSUV");
 break;
      }
 
 Scanner input = new Scanner(System.in);
 
-3
+
 
 
 
