@@ -6,8 +6,8 @@ public class Model {
         Sedan, Truck, SUV, Coupe, Convertible, Wagon, Minivan, Hatchback
     }
     
-    public enum Make {
-    Ford, Chevrolet, Toyota, Honda, Nissan, BMW, Mercedes, Audi, Volkswagen, Hyundai, Kia
+    public enum Brand {
+        Ford, Chevrolet, Toyota, Honda, Nissan, BMW, Mercedes, Audi, Volkswagen, Hyundai, Kia
    }
     
     public enum Specifications  {
@@ -15,11 +15,39 @@ public class Model {
 
     }
 
-    private String _CarType = "";
-    private String _Make = "";
-    private String _Specifications = "";
  
 
+    public enum SUVmakes{
+        RAV4, Highlander, _4Runner, Escape, Expedition, CR_V, Pilot, HR_V, Tucson, SantaFe, CX_5, CX_9, Q5, Q7, X3, X5, GLC, GLE, Tiguan, Atlas;
+
+        @Override
+        public String toString() {
+            switch (this) {
+                case _4Runner: return "4Runner";
+                case CR_V: return "CR-V";
+                case HR_V: return "HR-V";
+                case CX_5: return "CX-5";
+                case CX_9: return "CX-9";
+                case Q5: return "Q5";
+                case Q7: return "Q7";
+                case X3: return "X3";
+                case X5: return "X5";
+                case GLC: return "GLC";
+                case GLE: return "GLE";
+                case Tiguan: return "Tiguan";
+                case Atlas: return "Atlas";
+                default: return name();
+            }
+        }
+    }
+
+// you could create a if statment like: if the make is ..... and the car tpye is .... car spepfications are .....
+    private String _CarType = "";
+    private String _Brand = "";
+    private String _Specifications = "";
+    private String _Continue = "";
+    private String _PreMake = "";
+    private String _Make = "";
 public void set_CarType(String CarType) {
    _CarType = CarType;
 }
@@ -28,12 +56,12 @@ public String get_CarType() {
   
   }
   
-public void set_Make(String Make) {
-    _Make = Make;
+public void set_Brand(String Brand) {
+    _Brand = Brand;
 }
 
-public String get_Make(){
-    return _Make;
+public String get_Brand(){
+    return _Brand;
 }
 
 public void set_Specifications(String Specifications) {
@@ -44,7 +72,34 @@ public String get_Specifications() {
     
         return _Specifications;
 }
-   
+
+
+public void set_Continue(String Continue) {
+   _Continue = Continue;
+}
+public String get_Continue() {
+  return _Continue;
+
+  }
+
+  
+// Make this for the while a switch statement. 
+  public void set_PreMake(String PreMake) {
+    _PreMake = PreMake;
+}
+
+public String get_PreMake() {
+ return _PreMake;
+
+}
+
+public void set_Make(String Make) {
+    _Make = Make;
+}
+
+public String get_Make() {
+    return _Make;
+}
 
 
 
