@@ -5,7 +5,7 @@ public class CarDealership{
 
     public static void main(String[] args) {
     
-    Model car1 = new Model();
+    Model car1 = new Model("", "", "", "", ""); // Creating an instance of Model class with empty initial values
 
 // Start of while statement for when get_cartype is empty
 while (car1.get_CarType().isEmpty()) { 
@@ -227,10 +227,12 @@ System.out.println("\nYou have selected the following car: " + car1.get_PreMake(
 System.out.println("\nHere are the specifications of your selected car: ");
 System.out.println("");
 
-    } //? Class closing bracket
-}//? Main closing bracket
+System.out.println(car1);
 
-    
+    } //? Class closing bracket
+}//? Main closing bracke
+
+
 
 
 
