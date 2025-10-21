@@ -2,6 +2,56 @@ import java.util.Scanner;
 
 public class Model {
 
+    @Override
+public String toString() {
+    return "Car: " + _CarType + " " + _Brand + " " + _Make + 
+           "\nSpecs: " + _Specifications;
+}
+// Above is toString method to print out the car details (Figure out how it works)
+    // original full constructor (keeps your existing signature)
+ 
+    //! Overloaded constructors for flexibility
+    public Model() {
+        this._CarType = "";
+        this._Brand = "";
+        this._Specifications = "";
+        this._Make = "";
+        this._PreMake = "";
+    }
+
+
+    public Model(String CarType, String brand, String specifications, String make, String preMake) {
+        this._CarType = CarType;
+        this._Brand = brand;
+        this._Specifications = specifications;
+        this._Make = make;
+        this._PreMake = preMake;
+    }
+    public Model(String CarType, String brand, String specifications, String make) {
+        this();
+        this._CarType = CarType;
+        this._Brand = brand;
+        this._Specifications = specifications;
+        this._Make = make;
+    }
+    public Model(String CarType, String brand, String specifications) {
+        this();
+        this._CarType = CarType;
+        this._Brand = brand;
+        this._Specifications = specifications;
+    }
+    public Model(String CarType, String brand) {
+        this();
+        this._CarType = CarType;
+        this._Brand = brand;
+    }
+    public Model(String CarType) {
+        this();           // calls the no-arg constructor that sets fields to ""
+        this._CarType = CarType;
+    }
+   
+    //! End of overloaded constructors, now enums
+    
     public enum CarType {
         Sedan, Truck, SUV, Coupe, Convertible, Wagon, Minivan, Hatchback
     }
@@ -45,7 +95,6 @@ public class Model {
     private String _CarType = "";
     private String _Brand = "";
     private String _Specifications = "";
-    private String _Continue = "";
     private String _PreMake = "";
     private String _Make = "";
 public void set_CarType(String CarType) {
@@ -73,18 +122,7 @@ public String get_Specifications() {
         return _Specifications;
 }
 
-
-public void set_Continue(String Continue) {
-   _Continue = Continue;
-}
-public String get_Continue() {
-  return _Continue;
-
-  }
-
-  
-// Make this for the while a switch statement. 
-  public void set_PreMake(String PreMake) {
+public void set_PreMake(String PreMake) {
     _PreMake = PreMake;
 }
 
@@ -112,11 +150,11 @@ public String get_Make() {
 
         Scanner scanner = new Scanner(System.in);
         // You can add logic here to read user input if needed
+
+
+      
     }
 }
-
-
-
 
 //! Some Foreign Solution ion know, figure this out either way, didn't work for list stuff yuh yuh. 
 /*
@@ -156,9 +194,19 @@ public String get_Make() {
 
 
 
+//! Trying some new stuff
 
+    /*  
+     public Model(String carType, String brand, String specifications) {
+        this._CarType = carType;
+        this._Brand = brand;
+        this._Specifications = specifications;
+        this.Continue = "";
+        this.Make = "";
+        this.PreMake = carType + " " + brand;
 
-    
+     }
+    */
 
 
 
