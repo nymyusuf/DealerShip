@@ -77,7 +77,7 @@ while(car1.get_CarType() != null && car1.get_Brand() != null && car1.get_Make() 
 
     }
 switch(car1.get_CarType()) {
- 
+
 
 case "SUV":
 switch(car1.get_Brand()) {
@@ -154,7 +154,6 @@ switch(car1.get_Brand()) {
             
     
           }
-        
           try{
             Model.SUVmakes chosen = Model.SUVmakes.valueOf(car1.get_Make().trim());
             } catch (IllegalArgumentException e) {

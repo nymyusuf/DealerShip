@@ -4,7 +4,7 @@ public class Model {
 
     @Override
 public String toString() {
-    return "Car: " + _CarType + " " + _Brand + " " + _Make + 
+    return "Car: " + _CarType +  + " " + _Make + 
            "\nSpecs: " + _Specifications;
 }
 // Above is toString method to print out the car details (Figure out how it works)
@@ -13,37 +13,28 @@ public String toString() {
     //! Overloaded constructors for flexibility
     public Model() {
         this._CarType = "";
-        this._Brand = "";
         this._Specifications = "";
         this._Make = "";
         this._PreMake = "";
     }
 
 
-    public Model(String CarType, String brand, String specifications, String make, String preMake) {
+    public Model(String CarType, String specifications, String make, String preMake) {
         this._CarType = CarType;
-        this._Brand = brand;
         this._Specifications = specifications;
-        this._Make = make;
+        this._Make = make; 
         this._PreMake = preMake;
     }
-    public Model(String CarType, String brand, String specifications, String make) {
+    public Model(String CarType, String specifications, String make) {
         this();
         this._CarType = CarType;
-        this._Brand = brand;
         this._Specifications = specifications;
         this._Make = make;
     }
-    public Model(String CarType, String brand, String specifications) {
+    public Model(String CarType, String specifications) {
         this();
         this._CarType = CarType;
-        this._Brand = brand;
         this._Specifications = specifications;
-    }
-    public Model(String CarType, String brand) {
-        this();
-        this._CarType = CarType;
-        this._Brand = brand;
     }
     public Model(String CarType) {
         this();           // calls the no-arg constructor that sets fields to ""
@@ -52,13 +43,8 @@ public String toString() {
    
     //! End of overloaded constructors, now enums
     
-    public enum CarType {
-        Sedan, Truck, SUV, Coupe, Convertible, Wagon, Minivan, Hatchback
-    }
-    
-    public enum Brand {
-        Ford, Chevrolet, Toyota, Honda, Nissan, BMW, Mercedes, Audi, Volkswagen, Hyundai, Kia
-   }
+   
+  
     
     public enum Specifications  {
         Engine, Transmission, FuelType, Color, Interior, Mileage, Price, Features, Warranty
@@ -93,7 +79,6 @@ public String toString() {
 
 // you could create a if statment like: if the make is ..... and the car tpye is .... car spepfications are .....
     private String _CarType = "";
-    private String _Brand = "";
     private String _Specifications = "";
     private String _PreMake = "";
     private String _Make = "";
@@ -105,13 +90,7 @@ public String get_CarType() {
   
   }
   
-public void set_Brand(String Brand) {
-    _Brand = Brand;
-}
 
-public String get_Brand(){
-    return _Brand;
-}
 
 public void set_Specifications(String Specifications) {
     _Specifications = Specifications;
@@ -138,6 +117,23 @@ public void set_Make(String Make) {
 public String get_Make() {
     return _Make;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
